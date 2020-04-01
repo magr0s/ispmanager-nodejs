@@ -1,5 +1,5 @@
 const WebdomainMgr = require('./libs/webdomain')
 
-module.exports = [
+module.exports = {
   WebdomainMgr
-]
+}
