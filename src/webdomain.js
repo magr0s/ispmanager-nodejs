@@ -7,6 +7,17 @@ class WebdomainMgr extends ISPManager {
     this.func = 'webdomain'
   }
 
+  list () {
+    return this.fetch(this.func)
+      .then(({ doc }) => {
+        const { error, elem } = doc;
+
+        if (error) throw new Error(error['$type']);
+
+        return elem
+      })
+  }
+
   edit (params) {
     return this.fetch(`${this.func}.edit`, params)
       .then(({ doc }) => {
