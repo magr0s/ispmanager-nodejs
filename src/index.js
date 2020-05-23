@@ -1,4 +1,4 @@
-const WebdomainMgr = require('./libs/webdomain')
+const WebdomainMgr = require('./webdomain')
 
 module.exports = {
   WebdomainMgr

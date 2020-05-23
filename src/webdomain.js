@@ -1,4 +1,3 @@
-const querystring = require('querystring')
 const ISPManager = require('./ispmanager')
 
 class WebdomainMgr extends ISPManager {
