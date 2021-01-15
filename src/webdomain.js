@@ -28,6 +28,17 @@ class WebdomainMgr extends ISPManager {
         return doc
       })
   }
+
+  async delete (params) {
+    const { doc } = await this.fetch(`${this.func}.delete`, params);
+    const { error } = doc;
+
+    if (error) {
+      throw new Error(error['$type']);
+    }
+
+    return doc;
+  }
 }
 
-module.exports = WebdomainMgr
+module.exports = WebdomainMgr;
